@@ -14,7 +14,7 @@ def get_pesel_data(pesel):
     else:
         birth_date = '19' + pesel[:2] + '.' + str(month1) + pesel[3] + '.' + pesel[4:6]
     if int(pesel[-2]) % 2 == 0:
-        gender = 'K'
+        gender = 'F'
     else: gender = 'M'
 
     return pesel, datetime.strptime(birth_date, '%Y.%m.%d').date(), gender
