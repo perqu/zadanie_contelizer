@@ -33,12 +33,12 @@ class UtilsTestCase(TestCase):
         for pesel in pesels:
             self.assertFalse(check_control_digit(pesel))
 
-    def test_get_pesel_data_old_woman(self):
+    def test_get_pesel_data_old(self):
         pesel = '02070803628'
         expected_result = ('02070803628', datetime(1902, 7, 8).date(), 'K')
         self.assertEqual(get_pesel_data(pesel), expected_result)
 
-    def test_get_pesel_data_new_men(self):
+    def test_get_pesel_data_new(self):
         pesel = '00220325697'
         expected_result = ('00220325697', datetime(2000, 2, 3).date(), 'M')
         self.assertEqual(get_pesel_data(pesel), expected_result)

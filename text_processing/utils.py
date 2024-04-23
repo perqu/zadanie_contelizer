@@ -1,7 +1,10 @@
 import random
+import re
 
 def shuffle_word(word):
     if len(word) <= 3:
+        return word
+    if not word.isalpha():
         return word
     
     first_letter = word[0]
@@ -13,10 +16,8 @@ def shuffle_word(word):
     return shuffled_word
 
 def shuffle_sentence(sentence):
-    words = sentence.split()
+    words = re.split(r'(\W+)', sentence)
     shuffled_words = [shuffle_word(word) for word in words]
-    shuffled_sentence = ' '.join(shuffled_words)
+    shuffled_sentence = ''.join(shuffled_words)
     
     return shuffled_sentence
-
-print(shuffle_sentence('hello'))
