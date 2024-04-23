@@ -10,7 +10,12 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
-        <button type="submit">Send</button>
+        <button type="submit">Submit</button>
     </form>
+    
+    {% if modified_text %}
+    <h2>Result</h2>
+    <p>{{ modified_text }}</p>
+    {% endif %}
 </body>
 </html>

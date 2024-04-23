@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+
+    <form method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        {% if pesel_number and birth_date and gender %}
+        <p>Pesel: {{ pesel_number }}</p>
+        <p>Birth date: {{ birth_date }}</p>
+        <p>Gender: {{ gender }}</p>
+        {% endif %}
+        {{ form.as_p }}
+        <button type="submit">Sprawdź</button>
+    </form>
+</body>
+</html>
