@@ -35,7 +35,7 @@ class UtilsTestCase(TestCase):
 
     def test_get_pesel_data_old(self):
         pesel = '02070803628'
-        expected_result = ('02070803628', datetime(1902, 7, 8).date(), 'K')
+        expected_result = ('02070803628', datetime(1902, 7, 8).date(), 'F')
         self.assertEqual(get_pesel_data(pesel), expected_result)
 
     def test_get_pesel_data_new(self):
