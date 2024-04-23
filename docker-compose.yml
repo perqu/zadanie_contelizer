@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    container_name: code
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/code
+    restart: always

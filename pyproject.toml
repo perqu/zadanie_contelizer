@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "template-django"
+version = "0.1.0"
+description = ""
+authors = ["Paweł Perenc <57562561+perqu@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.4"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.1"
+psutil = "^5.9.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
